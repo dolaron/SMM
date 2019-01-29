@@ -1,0 +1,193 @@
+.cd,
+.cd-s {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding: 0;
+    margin:0;
+    height:2rem;
+}
+
+.cds-s {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding: 0;
+  margin:0;
+  height:2rem;
+  width: 6rem;
+}
+
+.cd {
+  width: 18rem;
+}
+
+.cd-s {
+  width: 14rem;
+}
+
+.cd-tooltip {
+  display:none;
+  opacity: 0;
+  position: absolute;
+  font-family: 'Permanent Marker';
+  z-index: 100;
+  bottom: -1.3rem;
+  left: 0;
+  color: gray;
+  transition: all 0.5s ease;
+  animation: slide-left;
+  animation-duration: 0.6s;
+}
+
+@keyframes slide-left {
+  from {
+    transform: translateX(10rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0rem);
+    opacity: .9;
+  }
+}
+  
+.cd-input:focus ~ .cd-tooltip {
+  display: flex;
+  opacity: 1;
+}
+
+.cd-input,
+.cd-input-disabled {
+  display:flex;
+  outline: none;
+  font: 1.5rem 'Source Sans Pro';
+  height: 2rem;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  padding-left: .2rem;
+  text-align: center;
+}
+
+.cd-input {
+  cursor: text;
+  border-bottom: 1px solid grey;
+}
+
+.cd-input-disabled {
+  background: transparent;
+}
+  
+.cd ~ input:required, select:required {
+  /* box-shadow: none; */
+}
+  
+.cd-label,
+.cd-label-disabled {
+  position: absolute;
+  pointer-events: none;
+  bottom: .35rem;
+  font-family: 'Permanent Marker';
+  color: grey;
+  background: white;
+  transition: all 0.35s ease;
+  z-index: 200;
+  margin:0;
+  padding:0;
+}
+
+.cd-label {
+  left: 1rem;
+  font-size: 1.6rem;
+}
+
+.cd-label-disabled {
+  left: .9rem;
+  font-size: 1.1rem;
+  bottom: 1.7rem;
+}
+  
+  /* set label on top of input and enlarge it*/
+.cd-input:focus ~ .cd-label,
+.cd-input:valid ~ .cd-label {
+  bottom: 2rem;
+  left: .2rem;
+  font-size: 1.2rem;
+  color: green;
+}
+  
+  /* set color label on hover */
+.cd-input:hover ~ .cd-label {
+  color: green;
+}
+.cd-input-disabled:hover ~ .cd-label-disabled {
+  color: #ccc;
+}
+  
+.cd-span {
+  display: flex;
+  position: relative;
+  width: 100%;
+  color: grey;
+}
+
+.cd-span:before, .cd-span:after {
+  display: table;
+  content:'';
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: forestgreen;
+  transition: width 0.5s ease;
+}
+  
+.cd-span:before {
+  left: 50%;
+}
+  
+.cd-span:after {
+  right: 50%;
+}
+  
+.cd-input:focus ~ span:before,
+.cd-input:focus ~ span:after,
+.cd-input:focus ~ div:before,
+.cd-input:focus ~ div:after {
+  width: 50%;
+}
+
+  /* SELECT  */
+.cd-select {
+  display: flex;
+  height: 2rem;
+  width: 4.5rem;
+  border-radius: 5px;
+  font: 1.2rem 'Source Sans Pro';
+  border:0;
+  appearance: none;
+  -webkit-appearance: none; 
+  -moz-appearance: none;
+  background: white;
+  text-indent: .4rem;
+  background-size: 2rem;
+  background-image: '../images/3209259-32.png';
+  background-repeat: no-repeat;
+  background-position: right;
+  border: 1px solid lightgrey;
+  outline-color: green;
+  cursor: pointer;
+  align-self: center;
+  margin: 0;
+}
+
+.cd-select:after {
+  position: absolute;
+  top: 0;
+  height: 2rem;
+  width: 2rem;
+  color: black;
+  content: ' \221F';
+}
+
+  /* SELECT */
