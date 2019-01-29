@@ -1,6 +1,6 @@
-# cv
+# smm
 
-> DJ CV
+> DJ SMM
 
 ## Build Setup
 
