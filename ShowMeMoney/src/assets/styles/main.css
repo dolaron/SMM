@@ -8,25 +8,6 @@
 @import url('https://fonts.googleapis.com/css?family=Faster+One');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
-/***********************/
-/* ACTIVE ROUTER LINK */
-
-/* .nav-link-active, */
-.router-link-active p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 4px solid green;
-  color: green;
-  font-size: 1.5rem;
-  height: 4.2rem;
-  transform: translateX(-.1rem);
-}
-
-
-/* ACTIVE ROUTER LINK */
-/*********************/
-
 /********************/
 /* VUE Transitions */
 

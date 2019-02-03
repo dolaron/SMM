@@ -1,13 +1,13 @@
 <template>
     <div class="display-row">
         <nav class="nav-top">
-            <router-link to="/" class="nav-logo" exact> show me money ! </router-link>
+            <p class="nav-logo" @click="navTo"> show me money ! </p>
             <div class="nav-links">
-                <router-link to="/debts" class="nav-link">
-                    <p> Dłużnicy </p>
+                <router-link to="/debts" exact class="nav-link">
+                    Dłużnicy
                 </router-link>
                 <router-link to="/login" class="nav-link" link>
-                    <p> Zaloguj się </p>
+                    Zaloguj się
                 </router-link>
                 <button @click="logout" class="btn-logout"> Wyloguj </button>
             </div>
@@ -17,6 +17,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import router from 'vue-router'
 export default {
     name: 'Nav',
     computed: {
@@ -25,6 +26,9 @@ export default {
         })
     },
     methods: {
+        navTo() {
+            this.$router.replace("/")
+        },
         logout () {
             this.$store.dispatch('logout')
         },
@@ -35,6 +39,3 @@ export default {
 }
 </script>
 
-<style>
-
-</style>
