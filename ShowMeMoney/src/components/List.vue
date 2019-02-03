@@ -23,9 +23,10 @@
             </li>
         </ul>
         <div class="list-btns">
-            <button @click="prevPage" class="list-arrow" :disabled="pageNumber === 0" > &#10094; </button>
+            <button @click="prevPage" class="list-arrow" v-show="pageNumber !== 0" > &#10094; </button>
             <button v-for="( page, index ) in pages" @click="toListPage( index )" :class="[ pageNumber === index ? 'list-dot-active' : 'list-dot' ]" :key="index"> &#8226; </button>
-            <button @click="nextPage" class="list-arrow" :disabled="pageNumber >= pageCount"> &#10095; </button>
+            <button @click="nextPage" class="list-arrow" v-show="pageNumber < pageCount" > &#10095; </button>
+            <!-- :disabled="pageNumber >= pageCount" -->
         </div>
     </div>
 </template>
@@ -35,7 +36,7 @@ export default {
     name: 'List',
     data () {
         return {
-            pageNumber: 0,
+            pageNumber: 1,
             pages: 1
         }
     },
@@ -47,15 +48,13 @@ export default {
        size: {
            type: Number,
            required: false,
-           default: 9
-
-       } 
+           default: 6
+       }
     },
     computed: {
         pageCount () {
             let l = this.listData.length,
                 s = this.size;
-            // if (Math.ceil(l/s) < 1) this.pages = 1
             this.pages = Math.ceil(l/s)
             return Math.ceil(l/s);
         },
