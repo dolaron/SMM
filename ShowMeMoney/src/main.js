@@ -15,6 +15,7 @@ require('./assets/styles/cd.css')
 require('./assets/styles/checkbox.css')
 require('./assets/styles/list-debtors.css')
 require('./assets/styles/nav.css')
+require('./assets/styles/modals.css')
 
 
 /* eslint-disable no-new */
