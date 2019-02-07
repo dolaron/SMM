@@ -11,7 +11,7 @@ import deletedModal from './modules/modals/deletedModal'
 Vue.use(Vuex)
 
 
-const store = new Vuex.Store({
+export default new Vuex.Store({
     modules: {
         auth,
         debt,
@@ -22,4 +22,3 @@ const store = new Vuex.Store({
         deletedModal
     }
 })
-export default store
