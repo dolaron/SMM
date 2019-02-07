@@ -24,8 +24,8 @@
         </ul>
         <div class="list-btns">
             <button @click="prevPage" class="list-arrow" v-show="pageNumber !== 0" > &#10094; </button>
-            <button v-for="( page, index ) in pages" @click="toListPage( index )" :class="[ pageNumber === index ? 'list-dot-active' : 'list-dot' ]" :key="index"> &#8226; </button>
-            <button @click="nextPage" class="list-arrow" v-show="pageNumber < pageCount" > &#10095; </button>
+            <button v-for="( page, index ) in vfor" @click="toListPage( index )" :class="[ pageNumber === index ? 'list-dot-active' : 'list-dot' ]" :key="index"> &#8226; </button>
+            <button @click="nextPage" class="list-arrow" v-show="pageNumber < pages"> &#10095; </button>
             <!-- :disabled="pageNumber >= pageCount" -->
         </div>
     </div>
@@ -37,7 +37,8 @@ export default {
     data () {
         return {
             pageNumber: 1,
-            pages: 1
+            pages: 1,
+            vfor: []
         }
     },
     props: {
@@ -48,20 +49,26 @@ export default {
        size: {
            type: Number,
            required: false,
-           default: 6
+           default: 4
        }
     },
     computed: {
         pageCount () {
             let l = this.listData.length,
-                s = this.size;
-            this.pages = Math.ceil(l/s)
-            return Math.ceil(l/s);
+                s = this.size,
+                leng = Math.ceil(l/s);
+            this.pages = leng
+
+            for (var i = 0; i < pages; i++) {
+                this.vfor.push(i)
+            }
+            // return leng
         },
         paginatedData () {
             const start = this.pageNumber * this.size,
-                    end = start + this.size;
-            return this.listData.slice(start, end);
+                    end = start + this.size,
+                   page = this.listData.slice(start, end) 
+            return page
         }
     },
     methods: {
