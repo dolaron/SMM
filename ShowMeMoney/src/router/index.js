@@ -5,16 +5,12 @@ import Login from '@/components/auth/Login'
 import ConfirmUser from '@/components/auth/ConfirmUser'
 import RegisterUser from '@/components/auth/RegisterUser'
 import SearchUser from '@/components/SearchUser'
-import Debt from '@/components/Debt'
 import Debts from '@/components/Debts'
 import NewDebt from '@/components/NewDebt'
 import Debtor from '@/components/Debtor'
-// import store from '../store/store'
-
 
 Vue.use(Router)
 
-// export default new Router({
 const router = new Router({
   routes: [
     {
@@ -41,12 +37,6 @@ const router = new Router({
       component: RegisterUser,
       beforeEnter: AuthGuard
     },
-    // {
-    //   path: '/debt',
-    //   name: 'Debt',
-    //   component: Debt,
-    //   beforeEnter: AuthGuard
-    // },
     {
       path: '/debts',
       name: 'Debts',

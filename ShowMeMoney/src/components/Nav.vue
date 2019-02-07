@@ -16,15 +16,9 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
 import router from 'vue-router'
 export default {
     name: 'Nav',
-    computed: {
-        ...mapGetters({
-            userPool: 'getUserPool'
-        })
-    },
     methods: {
         navTo() {
             this.$router.replace("/")
