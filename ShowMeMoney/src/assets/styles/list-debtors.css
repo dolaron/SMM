@@ -237,6 +237,7 @@
 .list-dot,
 .list-dot-active,
 .list-arrow {
+    display: table;
     font-family: 'Arial';
     background: transparent;
     border: 0;
