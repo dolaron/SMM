@@ -27,7 +27,6 @@
             <button @click="prevPage" class="list-arrow" :disabled="pageNumber === 0" > &#10094; </button>
             <button v-for="(p, index) in arrPages" @click="toListPage( index )" :class="[ pageNumber === index ? 'list-dot-active' : 'list-dot' ]" :key="index"> &#8226; </button>
             <button @click="nextPage" class="list-arrow" :disabled="pageNumber >= pageCount - 1"> &#10095; </button>
-            <!-- :disabled="pageNumber >= pageCount" -->
         </div>
     </div>
 </template>
@@ -54,15 +53,16 @@ export default {
     },
     computed: {
         pageCount () {
-        let l = this.listData.length,
-            s = this.size,
-            i;
-        let m = Math.ceil(l/s)
-        this.arrPages = [] 
-        for (i = 0; i < m; i++) {
-            this.arrPages.push(i)
-        }
-        return Math.ceil(l/s);
+            let l = this.listData.length,
+                s = this.size,
+                m = Math.ceil(l/s),
+                i;
+            
+            this.arrPages = [] 
+            
+            for (i = 0; i < m; i++) this.arrPages.push(i)
+            
+            return m;
         }, 
         paginatedData () {
             const start = this.pageNumber * this.size,
