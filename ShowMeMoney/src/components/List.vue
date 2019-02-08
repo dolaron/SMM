@@ -1,6 +1,6 @@
 <template>
     <div class="debt-list-items">
-        <ul class="list-debtors">
+
             <li class="dev-item-head">
                 <h4 class="dev-list-it" style="opacity: 0;"> Wykop </h4>
                 <div class="item-head">
@@ -11,6 +11,7 @@
                     <button class="btn-delete" style="opacity: 0;"> Delete </button>
                 </div>
             </li>
+        <ul class="list-debtors">    
             <li v-for=" p in paginatedData " @click="getDebtorDebts( p.debtor )" class="dev-item-debt" :key="p.debtId">
                 <h4 class="dev-list-it"> {{ trimId( p.userId )}} </h4>
                 <div class="item-debt">
@@ -23,9 +24,9 @@
             </li>
         </ul>
         <div class="list-btns">
-            <button @click="prevPage" class="list-arrow" v-show="pageNumber !== 0" > &#10094; </button>
-            <button v-for="( page, index ) in vfor" @click="toListPage( index )" :class="[ pageNumber === index ? 'list-dot-active' : 'list-dot' ]" :key="index"> &#8226; </button>
-            <button @click="nextPage" class="list-arrow" v-show="pageNumber < pages"> &#10095; </button>
+            <button @click="prevPage" class="list-arrow" :disabled="pageNumber === 0" > &#10094; </button>
+            <button v-for="(p, index) in arrPages" @click="toListPage( index )" :class="[ pageNumber === index ? 'list-dot-active' : 'list-dot' ]" :key="index"> &#8226; </button>
+            <button @click="nextPage" class="list-arrow" :disabled="pageNumber >= pageCount - 1"> &#10095; </button>
             <!-- :disabled="pageNumber >= pageCount" -->
         </div>
     </div>
@@ -36,9 +37,8 @@ export default {
     name: 'List',
     data () {
         return {
-            pageNumber: 1,
-            pages: 1,
-            vfor: []
+            pageNumber: 0,
+            arrPages: []
         }
     },
     props: {
@@ -54,21 +54,20 @@ export default {
     },
     computed: {
         pageCount () {
-            let l = this.listData.length,
-                s = this.size,
-                leng = Math.ceil(l/s);
-            this.pages = leng
-
-            for (var i = 0; i < pages; i++) {
-                this.vfor.push(i)
-            }
-            // return leng
-        },
+        let l = this.listData.length,
+            s = this.size,
+            i;
+        let m = Math.ceil(l/s)
+        this.arrPages = [] 
+        for (i = 0; i < m; i++) {
+            this.arrPages.push(i)
+        }
+        return Math.ceil(l/s);
+        }, 
         paginatedData () {
             const start = this.pageNumber * this.size,
-                    end = start + this.size,
-                   page = this.listData.slice(start, end) 
-            return page
+                    end = start + this.size;
+            return this.listData.slice(start, end);
         }
     },
     methods: {
@@ -84,7 +83,7 @@ export default {
         trimId (id) {
             let dots = ''
             if (id.length > 10) dots = '.. '
-            return id.substring(0, 8) + dots
+            return id.substring(0, 6) + dots
         },
         setDebt (debt) {
             // this.$store.commit('SET_DEBT', debt)

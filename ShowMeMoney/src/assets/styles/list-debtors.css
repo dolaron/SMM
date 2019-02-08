@@ -235,8 +235,7 @@
 
 
 .list-dot,
-.list-dot-active,
-.list-arrow {
+.list-dot-active {
     display: table;
     font-family: 'Arial';
     background: transparent;
@@ -253,16 +252,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 0;
+    cursor: pointer;
+    border-radius: 3rem;
     font-size: 1.5rem;
     width: 2.6rem;
     height: 2.6rem;
-    color: grey;
+    color: grey;    
+    transition: box-shadow .2s , color .2s, opacity .2s;
 }
 
-.list-arrow:disabled {
+/* .list-arrow:disabled {
     color: #d3d3d3;
     opacity: 0;
-}
+} */
 
 
 .list-dot {
@@ -293,7 +296,14 @@
 
 .list-dot:hover,
 .list-arrow:hover:not(:disabled) {
-    color: #333;
+    color: goldenrod;
     border-radius: 50%;
-    box-shadow: 0px 1px 10px grey;
+    box-shadow: 0px 1px 10px goldenrod;
+}
+.list-arrow:not(:disabled) {
+    color: goldenrod;
+}
+
+.list-arrow:disabled {
+    color: rgb(218, 218, 218);
 }
