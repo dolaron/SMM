@@ -186,19 +186,23 @@
 
 .list-ith:first-of-type,
 .list-it:first-of-type {
-    flex-basis: 16rem;
+    flex-basis: 10rem;
     justify-content: center;
 }
 
 .list-ith:nth-of-type(2),
-.list-it:nth-of-type(2) {
+.list-it:nth-of-type(2)
+ {
     justify-content: flex-end;
+    flex-basis: 6rem;
 }
 
 .list-ith:nth-of-type(3),
 .list-it:nth-of-type(3) {
     justify-content: flex-start;
+    flex-basis: 6rem;
 }
+
  
 .btn-clear,
 .btn-delete {
