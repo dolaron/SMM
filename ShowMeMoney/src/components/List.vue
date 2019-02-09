@@ -1,6 +1,5 @@
 <template>
     <div class="debt-list-items">
-
             <li class="dev-item-head">
                 <h4 class="dev-list-it" style="opacity: 0;"> Wykop </h4>
                 <div class="item-head">
@@ -41,7 +40,7 @@ export default {
         }
     },
     props: {
-       listData: {
+       debts: {
            type: Array,
            required: true
        },
@@ -53,7 +52,7 @@ export default {
     },
     computed: {
         pageCount () {
-            let l = this.listData.length,
+            let l = this.debts.length,
                 s = this.size,
                 m = Math.ceil(l/s),
                 i;
@@ -67,7 +66,7 @@ export default {
         paginatedData () {
             const start = this.pageNumber * this.size,
                     end = start + this.size;
-            return this.listData.slice(start, end);
+            return this.debts.slice(start, end);
         }
     },
     methods: {
