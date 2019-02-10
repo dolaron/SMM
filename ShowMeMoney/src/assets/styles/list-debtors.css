@@ -1,9 +1,14 @@
+*:focus {
+    outline: none;
+}
+
 .section-wrap {
     display: flex;
     flex-direction: column;
     flex:1;
     justify-content: space-around;
     height: 90%;
+    width: 90%;
   }
 
 /* .debts-appear {
@@ -49,10 +54,11 @@
 
 .list-debtors {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
     height: 100%;
-    width: 80rem;
+    /* width: 80rem; */
     list-style: none;
     margin: 0;
     padding:0;
@@ -60,11 +66,21 @@
 
 .dev-item-debt,
 .dev-item-head {
-    display: flex;
-    flex:0;
+    flex: 1 1 auto;
     align-items: center;
+    /* flex-wrap: wrap; */
     color: grey; 
     justify-content: space-between;
+}
+
+.dev-item-debt {
+    display: flex;
+    flex-direction: row;
+    margin: .5rem;
+}
+
+.dev-item-head {
+    display: none;
 }
 
 .dev-item-debt:hover .dev-list-it {
@@ -102,20 +118,21 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 3.5rem;
     border-radius: 7px;
     margin: 0;
     padding: 0;
+    min-height: 4rem;
     transition: box-shadow .2s ease-in-out;
     cursor: pointer;
     /*DEV*/
-    flex: 1;
+    flex: 1 1 auto;
     /*DEV*/
 }
 
 .item-debt {
     box-shadow: 2px 1px 11px grey;
     border: 2px solid rgba(0, 0, 0, 0.3);
+    flex-direction: column;
 }
 
 /* .item-debt:after {
@@ -140,6 +157,25 @@
     padding:0;
     font: 1.4rem 'Permanent Marker';
     position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.list-it:first-of-type {
+    margin: .5rem 0;
+}
+
+.list-it {
+    margin: 0 .5rem;
+}
+
+.btn-delete {
+    margin: .7rem 0 1.1rem 0;
+}
+
+.dev-list-it {
+    display: none;
 }
 
 .list-it {
@@ -181,26 +217,22 @@
 
 .list-it,
 .list-ith {
-    flex-basis: 10rem;
+    flex-basis: auto;
 }
 
 .list-ith:first-of-type,
 .list-it:first-of-type {
-    flex-basis: 10rem;
     justify-content: center;
 }
 
 .list-ith:nth-of-type(2),
-.list-it:nth-of-type(2)
- {
+.list-it:nth-of-type(2) {
     justify-content: flex-end;
-    flex-basis: 6rem;
 }
 
 .list-ith:nth-of-type(3),
 .list-it:nth-of-type(3) {
     justify-content: flex-start;
-    flex-basis: 6rem;
 }
 
  
@@ -310,4 +342,20 @@
 
 .list-arrow:disabled {
     color: rgb(218, 218, 218);
+}
+
+@media (min-width:85rem) {
+    .dev-item-head {
+        display: flex;
+    }
+    .dev-list-it { display: flex;}
+
+    .item-debt {
+        flex-direction: row;
+    }
+
+
+    .list-debtors {
+        flex-direction: column;
+    }
 }
