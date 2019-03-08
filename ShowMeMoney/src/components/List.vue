@@ -10,17 +10,19 @@
                     <button class="btn-delete" style="opacity: 0;"> Delete </button>
                 </div>
             </li>
-        <ul class="list-debtors">    
-            <li v-for=" p in paginatedData " @click="getDebtorDebts( p.debtor )" class="dev-item-debt" :key="p.debtId">
-                <h4 class="dev-list-it"> {{ trimId( p.userId )}} </h4>
-                <div class="item-debt">
-                    <h4 class="list-it"> {{ p.debtor }} </h4>
-                    <h4 class="list-it"> {{ p.debtName }} </h4>
-                    <h4 class="list-it"> {{ p.debtValue }} zl</h4>
-                    <h4 class="list-it"> {{ p.debtDate }} </h4>
-                    <button @click.stop="deleteDebt( p.debtId )" class="btn-delete"> Delete </button>
-                </div>
-            </li>
+        <ul class="list-debtors">
+            <transition-group name="list-item" tag="div" mode="out-in" style="display: flex; flex-direction: column; height: 100%;">
+                <li v-for="p in paginatedData " @click="getDebtorDebts( p.debtor )" class="dev-item-debt" :key="p.debtId">
+                    <h4 class="dev-list-it"> {{ trimId( p.userId )}} </h4>
+                    <div class="item-debt">
+                        <h4 class="list-it"> {{ p.debtor }} </h4>
+                        <h4 class="list-it"> {{ p.debtName }} </h4>
+                        <h4 class="list-it"> {{ p.debtValue }} zl</h4>
+                        <h4 class="list-it"> {{ p.debtDate }} </h4>
+                        <button @click.stop="deleteDebt( p.debtId )" class="btn-delete"> Delete </button>
+                    </div>
+                </li>
+            </transition-group>
         </ul>
         <div class="list-btns">
             <button @click="prevPage" class="list-arrow" :disabled="pageNumber === 0" > &#10094; </button>
@@ -98,3 +100,24 @@ export default {
     }
 }
 </script>
+
+<style>
+.list-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+.list-item-enter-active {
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  height: 100%;
+}
+.list-item-leave-active {
+    opacity: 0;
+    position: absolute;
+}
+
+.list-item-enter, .list-item-leave-to /* .list-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translatex(-200px);
+}
+
+</style>
