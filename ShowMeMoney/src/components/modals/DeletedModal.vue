@@ -2,9 +2,8 @@
     <div>
         <div class="modal__overlay"></div>
         <div class="modal__deleted">
-            <header class="modal-header">
-                <button @click="close" class="modal-exit">&#215;</button>
-                <!-- &#10006; -->
+            <header class="modal__header">
+                <button @click="close" class="modal__exit">&#215;</button>
             </header>
             <section class="deleted-section">
                 <h2 class="deleted-debtor" id="debtor-name"> {{ deletedDebt.debtor }} </h2> 
@@ -52,5 +51,64 @@ export default {
 </script>
 
 <style scoped>
+.modal__deleted {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 550px;
+    height: 350px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    max-width: 100%;
+    max-height: 100%;
+    background: white;
+    transform: translate(-50%, -50%);
+    border: 0;
+    border-radius: .45rem;
+    box-shadow: 0 0 10px grey;
+    margin: auto;
+    z-index: 300;
+    box-shadow: 10px 8px 100px #333;
+}
 
+.deleted-debtor,
+.deleted-value,
+.deleted-date {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font: 2.2rem 'Permanent Marker';
+    flex-wrap: nowrap;
+    transition: color .2s;
+}
+
+.deleted-debtor {
+    flex-basis: 7.5rem;
+}
+
+.deleted-value {
+    display:flex;
+    flex-basis: 3rem;
+}
+
+.deleted-txta,
+.deleted-txtb,
+.deleted-txtc {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font: 1.5rem 'Helvetica';
+}
+
+.deleted-txta { flex-basis: 16.8rem; }
+
+.deleted-txtb {
+    flex-basis: 6rem;
+}
+
+.deleted-txtc {
+    flex-basis: 3rem;
+}
 </style>
