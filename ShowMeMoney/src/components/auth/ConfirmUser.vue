@@ -5,7 +5,7 @@
                 <h2 class="cred-header">Potwierdz</h2>
                 <div class="cd">
                     <input v-model="username" class="cd-input" required>
-                    <div class="cd-span" />
+                    <div class="cd-span"/>
                     <label class="cd-label">Username</label>
                 </div>
                 <div class="cd">
