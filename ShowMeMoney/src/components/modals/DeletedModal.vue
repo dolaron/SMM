@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div class="modal-overlay"></div>
-        <div class="modal-deleted">
+        <div class="modal__overlay"></div>
+        <div class="modal__deleted">
             <header class="modal-header">
                 <button @click="close" class="modal-exit">&#215;</button>
                 <!-- &#10006; -->
@@ -27,11 +27,6 @@
 import { mapGetters } from 'vuex'
 export default {
     name: 'DeletedModal',
-    data() {
-        return {
-
-        }
-    },
     computed: {
         ...mapGetters({
             deletedDebt: 'getLastDeletedDebt'
@@ -55,3 +50,7 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+
+</style>

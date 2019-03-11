@@ -100,7 +100,7 @@
     flex-basis: 3rem;
 }
 
-.modal-overlay {
+.modal__overlay {
     background: rgba(0.2, 0.2, 0.4, 0.3);
     position: fixed;
     top:0;

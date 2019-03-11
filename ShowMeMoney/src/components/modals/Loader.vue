@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="overlay"></div>
+        <div class="modal__overlay"></div>
         <div class="loader">
             <div/>
             <div/>
@@ -15,16 +15,6 @@ export default {
 </script>
 
 <style scoped>
-.overlay {
-  position: fixed;
-  z-index: 1500;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3);
-}
-
 .loader {
   position: fixed;
   top: 50%;
