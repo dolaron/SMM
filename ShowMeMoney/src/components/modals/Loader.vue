@@ -14,7 +14,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .overlay {
   position: fixed;
   z-index: 1500;
@@ -47,12 +47,10 @@ export default {
   border-radius: 50%;
   animation: loader 0.6s infinite alternate;
 }
-.loader > div:nth-child(2) {
-  animation-delay: 0.2s;
-}
-.loader > div:nth-child(3) {
-  animation-delay: 0.4s;
-}
+
+.loader > div:nth-child(2) { animation-delay: 0.2s; }
+.loader > div:nth-child(3) { animation-delay: 0.4s; }
+
 @keyframes loader {
   from {
       opacity: 1;
