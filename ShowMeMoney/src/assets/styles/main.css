@@ -61,16 +61,6 @@ transform: translateX(0rem);
   min-height: 90%;
 }
 
-.cred-header {
-  display: flex;
-  align-self: center;
-  font-family: 'Permanent Marker';
-  color: #ccc;
-  transition: color .3s ease;
-  margin: 0;
-  padding: 0;
-}
-
 .btn__submit,
 .btn__new {
   display: flex;

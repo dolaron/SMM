@@ -1,8 +1,8 @@
 <template>
     <div>
         <section class="section">
-            <div class="register-creds">
-                <h2 class="cred-header">Register</h2>
+            <div class="register__credentials">
+                <h2 class="register__credentials__header">Register</h2>
                 <div class="cd">
                     <input v-model="username" class="cd__input" required>
                     <div class="cd__span"/>
@@ -45,29 +45,26 @@ export default {
 }
 </script>
 
-<style>
-    .register-creds {
+<style scoped>
+    .register__credentials {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         height: 30rem;
     }
-    .register-creds:hover > h2,
-    .register-creds:focus-within > h2  {
+    .register__credentials:hover > .register__credentials__header,
+    .register__credentials:focus-within > .register__credentials__header  {
         color : green;
     }
 
-    .btn-rregister {
-        display:flex;
-        width: 8rem;
-        font: 1.1rem 'Permanent Marker';
-        background: transparent;
-        border-radius: 6px;
-        border: 2px solid green;
-        color: green;
-        padding:0;
-        margin:0;
+    .register__credentials__header {
+        display: flex;
+        align-self: center;
+        font-family: 'Permanent Marker';
+        color: #ccc;
+        transition: color .3s ease;
+        margin: 0;
+        padding: 0;
     }
-
 
 </style>
