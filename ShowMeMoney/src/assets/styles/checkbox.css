@@ -28,17 +28,11 @@
     cursor: pointer;
 }
 
-.checkbox__input:checked ~ .checkbox__in:after {
-    opacity: 1;
-}
+.checkbox__input:checked ~ .checkbox__in:after { opacity: 1; }
 
-.checkbox__input:checked ~ .checkbox__in {
-    background: orange;
-}
+.checkbox__input:checked ~ .checkbox__in { background: orange; }
 
-.checkbox__input:checked:hover ~ .checkbox__in {
-    background: rgb(218, 141, 0);
-}
+.checkbox__input:checked:hover ~ .checkbox__in { background: rgb(218, 141, 0); }
 
 .checkbox__input:disabled ~ .checkbox__in {
     background: rgb(243, 243, 243);
@@ -47,18 +41,12 @@
 }
 
 /* WHEN CHECKBOX IS CHECKED BUT DISABLED */
-.checkbox__input:disabled:checked ~ .checkbox__in {
-    background: orange;
-}
+.checkbox__input:disabled:checked ~ .checkbox__in { background: orange; }
 
-.checkbox__input:disabled:checked:hover ~ .checkbox__in {
-    background: rgb(243, 243, 243);
-}
+.checkbox__input:disabled:checked:hover ~ .checkbox__in { background: rgb(243, 243, 243); }
 /* WHEN CHECKBOX IS CHECKED BUT DISABLED */
 
-.checkbox__in:hover {
-    background: #ccc;
-}
+.checkbox__in:hover { background: #ccc; }
 
 .checkbox__in:after {
     content: "";
@@ -75,16 +63,17 @@
 
 .checkbox__margin:disabled:not(:checked),
 .checkbox__margin:disabled:not(:checked) ~ .checkbox__in,
-.checkbox__margin:disabled:not(:checked) ~ p {
+.checkbox__margin:disabled:not(:checked) ~ .checkbox__label {
     display: none;
     color: #ccc;
 }
 
 .checkbox__label {
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
     cursor: pointer;
     margin-left:.5rem;
     font: 1.2rem 'Permanent Marker';
 }
+
 /* CHECKBOX */
