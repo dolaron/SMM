@@ -41,11 +41,6 @@ export default {
             pass: ''
         }
     },
-    computed: {
-        ...mapGetters({
-            // toast: 'getToastTxt'
-        })
-    },
     methods: {
         onLogin () {
             const data = { login: this.login,
@@ -60,6 +55,7 @@ export default {
 </script>
 
 <style scoped>
+
     .login__plane {
         display: flex;
         height: 30rem;
@@ -91,9 +87,7 @@ export default {
         border-color: green;
     }
 
-    .login__plane__link__header {
-        margin: 0;
-    }
+    .login__plane__link__header { margin: 0; }
 
     .login__plane__credentials {
         display: flex;
@@ -124,8 +118,6 @@ export default {
         border-color: #808080;
     }
 
-    .mrt {
-        margin-top: 2rem;
-    }
+    .mrt { margin-top: 2rem; }
 
 </style>

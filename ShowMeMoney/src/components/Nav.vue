@@ -34,6 +34,7 @@ export default {
 </script>
 
 <style scoped>
+
 .nav__top {
   display: flex;
   flex: 10;
@@ -42,7 +43,7 @@ export default {
   height: 9vh;
   min-height:3.5rem;
   box-shadow: 0 0 20px -2px rgb(11, 22, 88);
-  margin:0;
+  margin: 0;
 }
   
 .nav__logo {
@@ -58,9 +59,7 @@ export default {
   transition: color .2s;
 }
 
-.nav__logo:hover {
-  color: goldenrod;
-}
+.nav__logo:hover { color: goldenrod; }
   
 .nav__links {
   display: flex;
@@ -116,5 +115,5 @@ export default {
   color: goldenrod;
   font-size: 1.2rem;
 }
-</style>
 
+</style>

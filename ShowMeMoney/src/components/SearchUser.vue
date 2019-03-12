@@ -24,6 +24,7 @@ export default {
 </script>
 
 <style scoped>
+
 .hero__header {
   display: flex;
   justify-content: flex-start;
@@ -36,7 +37,7 @@ export default {
 .hero__title {
   padding-left: 5rem;
   font-family: 'Permanent Marker';
-  margin:0;
+  margin: 0;
   font-size: 5rem;
 }
 
@@ -50,4 +51,5 @@ export default {
     padding-left: 1.35rem;
   }
 }
+
 </style>
