@@ -2,7 +2,6 @@
 
 /********************/
 /* VUE Transitions */
-
 .fade-enter-active,
 .fade-leave-active {
     transition: opacity .2s
@@ -18,15 +17,8 @@
 .fade-in-enter-to {
   opacity: 1;
 }
-
 /* VUE Transitions */
 /******************/
-
-.app {
-    /* display: flex; */
-    /* flex-direction: column; */
-    min-height: 100%;
-}
 
 .section {
   position: relative;
@@ -60,7 +52,7 @@
 
 .btn__new {
   align-self: flex-end;
-  margin:0;
+  margin: 0;
 }
 
 .btn__submit:hover,

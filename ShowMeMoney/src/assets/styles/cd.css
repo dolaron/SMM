@@ -1,8 +1,9 @@
-/* material content design for inputsm selects and accompaning labels */
+/* material content design for inputs and selects and accompanying labels */
 
 .cd,
 .cd--s,
-.cd--xs {
+.cd--xs,
+.cd--xl {
     display: flex;
     position: relative;
     flex-direction: column;
@@ -16,6 +17,8 @@
 .cd--s { width: 14rem; }
 
 .cd--xs { width: 6rem; }
+
+.cd--xl { width: 26rem; }
 
 .cd__tooltip {
   display: none;
@@ -65,13 +68,9 @@
   border-bottom: 1px solid grey;
 }
 
-.cd__input--disabled {
-  background: transparent;
-}
+.cd__input--disabled { background: transparent; }
   
-.cd ~ input:required, select:required {
-  /* box-shadow: none; */
-}
+.cd ~ input:required, select:required { /* box-shadow: none; */ }
   
 .cd__label,
 .cd__label--disabled {
@@ -108,12 +107,8 @@
 }
   
   /* set color label on hover */
-.cd__input:hover ~ .cd__label {
-  color: green;
-}
-.cd__input-disabled:hover ~ .cd__label--disabled {
-  color: #ccc;
-}
+.cd__input:hover ~ .cd__label { color: green; }
+.cd__input-disabled:hover ~ .cd__label--disabled { color: #ccc; }
   
 .cd__span {
   display: flex;
@@ -133,20 +128,14 @@
   transition: width 0.5s ease;
 }
   
-.cd__span:before {
-  left: 50%;
-}
+.cd__span:before { left: 50%; }
   
-.cd__span:after {
-  right: 50%;
-}
+.cd__span:after { right: 50%; }
   
 .cd__input:focus ~ .cd__span:before,
 .cd__input:focus ~ .cd__span:after,
 .cd__input:focus ~ div:before,
-.cd__input:focus ~ div:after {
-  width: 50%;
-}
+.cd__input:focus ~ div:after { width: 50%; }
 
   /* SELECT  */
 .cd__select {
@@ -155,7 +144,7 @@
   width: 4.5rem;
   border-radius: 5px;
   font: 1.2rem 'Source Sans Pro';
-  border:0;
+  border: 0;
   appearance: none;
   -webkit-appearance: none; 
   -moz-appearance: none;

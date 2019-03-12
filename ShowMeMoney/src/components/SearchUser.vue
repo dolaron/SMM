@@ -1,11 +1,11 @@
 <template>
-  <div id="app">
+  <div>
     <section class="section">
       <div class="hero__header">
         <h1 class="hero__title"> Kolega siedzi kase. </h1>
       </div>
       <div class="hero__bar">
-        <div class="cd">
+        <div class="cd--xl">
           <input class="cd__input" required>
           <span class="cd__span"></span>
           <label class="cd__label"> Gdzie jest skurczysyn? </label>

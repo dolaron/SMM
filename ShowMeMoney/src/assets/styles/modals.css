@@ -6,7 +6,7 @@
     flex-grow: 0;
     padding: .15rem .6rem;
     background: transparent;
-    border:2px solid #333;
+    border: 2px solid #333;
     box-shadow: 1px 2px 8px grey;
     border-radius: .7rem;
     font: 1.5rem 'Permanent Marker';
@@ -16,7 +16,7 @@
 
 .btn-sdi:hover {
     box-shadow: 0 0 10px goldenrod;
-    border:2px solid rgb(206, 159, 41);
+    border: 2px solid rgb(206, 159, 41);
     color: goldenrod;
 
 }
@@ -37,7 +37,7 @@
     font: 2.4rem 'Arial';
     font-weight: bold;
     background: transparent;
-    cursor:pointer;
+    cursor: pointer;
     transition: color .2s;
     margin: 0;
     border: 0;
@@ -48,7 +48,7 @@
 .modal__overlay {
     background: rgba(0.2, 0.2, 0.4, 0.3);
     position: fixed;
-    top:0;
+    top: 0;
     left:0;
     width: 100%;
     height: 100%;
