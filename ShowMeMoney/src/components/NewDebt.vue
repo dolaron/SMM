@@ -4,17 +4,17 @@
             <div class="form-new-debt">
                 <div class="cd">
                     <input v-model="debtor" class="cd-input" required>
-                    <span class="cd-span"/>
+                    <span class="cd__span"/>
                     <label class="cd-label"> Skurczysyn </label>
                 </div>
                 <div class="cd">
                     <input v-model="item" class="cd-input" required>
-                    <span class="cd-span"/>
+                    <span class="cd__span"/>
                     <label class="cd-label"> Za co? </label>
                 </div>
                 <div class="cd">
                     <input v-model="val" class="cd-input" required>
-                    <span class="cd-span"/>
+                    <span class="cd__span"/>
                     <label class="cd-label"> Ile? </label>
                 </div>
                 <div class="nd-row">
@@ -28,7 +28,7 @@
                     </div>
                     <div class="cd-s">
                         <input v-model="date" :class="checkToday ? 'cd-input-disabled' : 'cd-input'" type="date" :disabled="checkToday ? true : false" required>
-                        <span class="cd-span"/>
+                        <span class="cd__span"/>
                         <label :class="checkToday ? 'cd-label-disabled' : 'cd-label'"> Kiedy? </label>
                     </div>
                     <label class="checkbox-wrap">
@@ -38,7 +38,7 @@
                     </label>
                 </div>
             </div>
-            <button @click="newDebt" class="btn-submit"> Dodaj </button>
+            <button @click="newDebt" class="btn__submit"> Dodaj </button>
         </section>
     </div>
 </template>

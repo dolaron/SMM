@@ -5,15 +5,15 @@
                 <h2 class="cred-header">Potwierdz</h2>
                 <div class="cd">
                     <input v-model="username" class="cd-input" required>
-                    <div class="cd-span"/>
+                    <div class="cd__span"/>
                     <label class="cd-label">Username</label>
                 </div>
                 <div class="cd">
                     <input v-model="confirmationCode" class="cd-input" type="password" required>
-                    <div class="cd-span" />
+                    <div class="cd__span" />
                     <label class="cd-label">Code</label>
                 </div>
-                <button @click="confirmUser" class="btn-submit">Potwierdz uzytkownika</button>
+                <button @click="confirmUser" class="btn__submit">Potwierdz uzytkownika</button>
             </div>
         </section>
     </div>    

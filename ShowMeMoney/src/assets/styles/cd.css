@@ -26,7 +26,7 @@
   width: 14rem;
 }
 
-.cd-tooltip {
+.cd__tooltip {
   display:none;
   opacity: 0;
   position: absolute;
@@ -51,7 +51,7 @@
   }
 }
   
-.cd-input:focus ~ .cd-tooltip {
+.cd-input:focus ~ .cd__tooltip {
   display: flex;
   opacity: 1;
 }
@@ -124,34 +124,34 @@
   color: #ccc;
 }
   
-.cd-span {
+.cd__span {
   display: flex;
   position: relative;
   width: 100%;
   color: grey;
 }
 
-.cd-span:before, .cd-span:after {
+.cd__span:before, .cd__span:after {
   display: table;
   content:'';
   position: absolute;
   bottom: 0;
   width: 0;
-  height: 2px;
+  height: 3px;
   background: forestgreen;
   transition: width 0.5s ease;
 }
   
-.cd-span:before {
+.cd__span:before {
   left: 50%;
 }
   
-.cd-span:after {
+.cd__span:after {
   right: 50%;
 }
   
-.cd-input:focus ~ span:before,
-.cd-input:focus ~ span:after,
+.cd-input:focus ~ .cd__span:before,
+.cd-input:focus ~ .cd__span:after,
 .cd-input:focus ~ div:before,
 .cd-input:focus ~ div:after {
   width: 50%;
