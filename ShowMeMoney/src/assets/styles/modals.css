@@ -45,7 +45,6 @@
 
 .modal__exit:hover { color:#ccc; }
 
-
 .modal__overlay {
     background: rgba(0.2, 0.2, 0.4, 0.3);
     position: fixed;

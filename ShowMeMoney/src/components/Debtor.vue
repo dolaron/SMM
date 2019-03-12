@@ -1,18 +1,18 @@
 <template>
     <div>
         <section class="section">
-            <router-link to="/debts" class="btn-back" tag="button"> &#10508; Debts </router-link>
-            <div class="debtor-debts">
-                <h4 class="debtor-title"> {{ debtorDebts[0].debtor }}'s all debts </h4>
-                <div class="debtor-row">
-                    <ul class="debtor-list">
-                        <li v-for="debt in debtorDebts" class="debt-item" :key="debt.debtId">
-                            <h4 class="debt-value"> {{ debt.debtValue }} </h4>
-                            <h4 class="debt-name"> {{ debt.debtName }} </h4>
-                            <h4 class="debt-date "> {{ debt.debtDate }} </h4>
+            <router-link to="/debts" class="btn__back" tag="button"> &#10508; Debts </router-link>
+            <div class="debtor__debts">
+                <h4 class="debtor__debts__title"> {{ debtorDebts[0].debtor }}'s all debts </h4>
+                <div class="debtor__debts__row">
+                    <ul class="debtor__debts__list">
+                        <li v-for="debt in debtorDebts" class="debtor__debts__item" :key="debt.debtId">
+                            <h4 class="debtor__debts__item__value"> {{ debt.debtValue }} </h4>
+                            <h4 class="debtor__debts__item__name"> {{ debt.debtName }} </h4>
+                            <h4 class="debtor__debts__item__date"> {{ debt.debtDate }} </h4>
                         </li>
                     </ul>
-                    <img src="../assets/images/iconfinder_woman-runner.png" class="debtor-img">
+                    <img src="../assets/images/iconfinder_woman-runner.png" class="debtor__debts__img">
                 </div>
             </div>
         </section>
@@ -31,9 +31,9 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
-.btn-back {
+.btn__back {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -48,13 +48,7 @@ export default {
     color: #ccc;
 }
 
-.btn-txth {
-    margin: 0;
-    padding: 0;
-
-}
-
-.debtor-debts {
+.debtor__debts {
     display:flex;
     justify-content: center;
     align-items: center;
@@ -64,38 +58,38 @@ export default {
     width: 80%;
 }
 
-.debtor-title {
+.debtor__debts__title {
     display: flex;
     font: 3rem 'Permanent Marker';
 }
 
-.debtor-row {
+.debtor__debts__row {
     display: flex;
     height: 20rem;
     justify-content: space-around;
 }
 
-.debtor-list {
+.debtor__debts__list {
     display: flex;
     flex-direction: column;
     width: 100%;
     width: 30rem;
 }
 
-.debt-item {
+.debtor__debts__item {
     display: flex;
     justify-content: space-around;
 }
 
-.debt-value,
-.debt-name,
-.debt-date {
+.debtor__debts__item__value,
+.debtor__debts__item__name,
+.debtor__debts__item__date {
     display: flex;
     font: 1.3rem 'Permanent Marker';
     flex-basis: 8rem;
 }
 
-.debtor-img {
+.debtor__debts__img {
     width: auto;
     height: auto;
     max-width: 250px;
