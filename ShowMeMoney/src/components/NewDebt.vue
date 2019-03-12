@@ -20,10 +20,7 @@
                 <div class="new__debt__row">
                     <div class="cds-s">
                         <select class="cd__select">
-                            <option> 2018 </option>
-                            <option> 2017 </option>
-                            <option> 2016 </option>
-                            <option> 2015 </option>
+                            <option v-for="date in dates" :key="date">{{ date }}</option>
                         </select> 
                     </div>
                     <div class="cd-s">
@@ -53,8 +50,9 @@ export default {
             debtor: "",
             item: "",
             val: "",
-            date: "2018-12-11",
-            checkToday: true
+            date: new Date().toISOString().split('T')[0].toString(),
+            checkToday: true,
+            dates: [ 2018, 2016, 2015, 2014 ]
         }
     },
     computed: {
@@ -79,6 +77,7 @@ export default {
 </script>
 
 <style scoped>
+
     .new__debt__row {
         display: flex;
         padding: 0;
@@ -93,4 +92,5 @@ export default {
         flex-direction: column;
         justify-content: space-around;
     }
+
 </style>

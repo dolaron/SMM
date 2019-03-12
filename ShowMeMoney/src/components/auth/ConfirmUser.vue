@@ -10,7 +10,7 @@
                 </div>
                 <div class="cd">
                     <input v-model="confirmationCode" class="cd__input" type="password" required>
-                    <div class="cd__span" />
+                    <div class="cd__span"/>
                     <label class="cd__label">Code</label>
                 </div>
                 <button @click="confirmUser" class="btn__submit">Potwierdz uzytkownika</button>
