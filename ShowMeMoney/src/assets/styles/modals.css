@@ -26,15 +26,7 @@
     width: 100%;
 }
 
-.deleted-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 80%;
-}
-
-.modal-footer {
+.modal__footer {
     display: flex;
     height: 5rem;
 }

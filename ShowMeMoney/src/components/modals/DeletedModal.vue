@@ -5,16 +5,16 @@
             <header class="modal__header">
                 <button @click="close" class="modal__exit">&#215;</button>
             </header>
-            <section class="deleted-section">
-                <h2 class="deleted-debtor" id="debtor-name"> {{ deletedDebt.debtor }} </h2> 
-                <h4 class="deleted-txta"> must have returned that </h4>
-                <h2 class="deleted-value"> {{ deletedDebt.debtValue }} </h2>
-                <h2 class="deleted-txtb"> from the </h2>
-                <h4 class="deleted-date"> {{ deletedDebt.debtDate }} </h4>
-                <h2 class="deleted-txtc"> for </h2>
-                <h4 class="deleted-date"> {{ deletedDebt.debtName }} </h4>
+            <section class="modal__deleted__section">
+                <h2 class="modal__deleted__debtor" id="debtor-name"> {{ deletedDebt.debtor }} </h2> 
+                <h4 class="modal__deleted__txta"> must have returned that </h4>
+                <h2 class="modal__deleted__value"> {{ deletedDebt.debtValue }} </h2>
+                <h2 class="modal__deleted__txtb"> from the </h2>
+                <h4 class="modal__deleted__date"> {{ deletedDebt.debtDate }} </h4>
+                <h2 class="modal__deleted__txtc"> for </h2>
+                <h4 class="modal__deleted__debt"> {{ deletedDebt.debtName }} </h4>
             </section>
-            <footer class="modal-footer">
+            <footer class="modal__footer">
                 <button @click="getDebtorDebts()" @mouseover="setGoldName( $event )" @mouseout="setGoldName( $event )" class="btn-sdi"> Siedzi cos jeszcze? </button>
             </footer>
         </div>
@@ -73,9 +73,18 @@ export default {
     box-shadow: 10px 8px 100px #333;
 }
 
-.deleted-debtor,
-.deleted-value,
-.deleted-date {
+.modal__deleted__section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+.modal__deleted__debtor,
+.modal__deleted__value,
+.modal__deleted__date,
+.modal__deleted__debt {
     display: flex;
     justify-content: center;
     margin: 0;
@@ -84,31 +93,25 @@ export default {
     transition: color .2s;
 }
 
-.deleted-debtor {
-    flex-basis: 7.5rem;
-}
+.modal__deleted__debtor { flex-basis: 7.5rem; }
 
-.deleted-value {
+.modal__deleted__value {
     display:flex;
     flex-basis: 3rem;
 }
 
-.deleted-txta,
-.deleted-txtb,
-.deleted-txtc {
+.modal__deleted__txta,
+.modal__deleted__txtb,
+.modal__deleted__txtc {
     display: flex;
     justify-content: center;
     margin: 0;
     font: 1.5rem 'Helvetica';
 }
 
-.deleted-txta { flex-basis: 16.8rem; }
+.modal__deleted__txta { flex-basis: 16.8rem; }
 
-.deleted-txtb {
-    flex-basis: 6rem;
-}
+.modal__deleted__txtb { flex-basis: 6rem; }
 
-.deleted-txtc {
-    flex-basis: 3rem;
-}
+.modal__deleted__txtc { flex-basis: 3rem; }
 </style>
