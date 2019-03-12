@@ -4,14 +4,14 @@
             <div class="conf-creds">
                 <h2 class="cred-header">Potwierdz</h2>
                 <div class="cd">
-                    <input v-model="username" class="cd-input" required>
+                    <input v-model="username" class="cd__input" required>
                     <div class="cd__span"/>
-                    <label class="cd-label">Username</label>
+                    <label class="cd__label">Username</label>
                 </div>
                 <div class="cd">
-                    <input v-model="confirmationCode" class="cd-input" type="password" required>
+                    <input v-model="confirmationCode" class="cd__input" type="password" required>
                     <div class="cd__span" />
-                    <label class="cd-label">Code</label>
+                    <label class="cd__label">Code</label>
                 </div>
                 <button @click="confirmUser" class="btn__submit">Potwierdz uzytkownika</button>
             </div>

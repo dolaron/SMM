@@ -3,23 +3,23 @@
         <section class="section">
             <div class="form-new-debt">
                 <div class="cd">
-                    <input v-model="debtor" class="cd-input" required>
+                    <input v-model="debtor" class="cd__input" required>
                     <span class="cd__span"/>
-                    <label class="cd-label"> Skurczysyn </label>
+                    <label class="cd__label"> Skurczysyn </label>
                 </div>
                 <div class="cd">
-                    <input v-model="item" class="cd-input" required>
+                    <input v-model="item" class="cd__input" required>
                     <span class="cd__span"/>
-                    <label class="cd-label"> Za co? </label>
+                    <label class="cd__label"> Za co? </label>
                 </div>
                 <div class="cd">
-                    <input v-model="val" class="cd-input" required>
+                    <input v-model="val" class="cd__input" required>
                     <span class="cd__span"/>
-                    <label class="cd-label"> Ile? </label>
+                    <label class="cd__label"> Ile? </label>
                 </div>
                 <div class="nd-row">
                     <div class="cds-s">
-                        <select class="cd-select">
+                        <select class="cd__select">
                             <option> 2018 </option>
                             <option> 2017 </option>
                             <option> 2016 </option>
@@ -27,9 +27,9 @@
                         </select> 
                     </div>
                     <div class="cd-s">
-                        <input v-model="date" :class="checkToday ? 'cd-input-disabled' : 'cd-input'" type="date" :disabled="checkToday ? true : false" required>
+                        <input v-model="date" :class="checkToday ? 'cd__input--disabled' : 'cd__input'" type="date" :disabled="checkToday ? true : false" required>
                         <span class="cd__span"/>
-                        <label :class="checkToday ? 'cd-label-disabled' : 'cd-label'"> Kiedy? </label>
+                        <label :class="checkToday ? 'cd__label--disabled' : 'cd__label'"> Kiedy? </label>
                     </div>
                     <label class="checkbox-wrap">
                         <input @change="checkToday = !checkToday" class="checkbox-new" type="checkbox" :checked="checkToday">
