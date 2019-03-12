@@ -6,9 +6,9 @@
       </div>
       <div class="hero__bar">
         <div class="cd">
-          <input class="cd-input" required>
+          <input class="cd__input" required>
           <span class="cd__span"></span>
-          <label class="cd-label"> Gdzie jest skurczysyn? </label>
+          <label class="cd__label"> Gdzie jest skurczysyn? </label>
           <div class="cd__tooltip"> * wpisz min. 3 znaki </div>
         </div>
       </div>

@@ -1,3 +1,5 @@
+/* material content design for inputsm selects and accompaning labels */
+
 .cd,
 .cd-s {
     display: flex;
@@ -51,13 +53,13 @@
   }
 }
   
-.cd-input:focus ~ .cd__tooltip {
+.cd__input:focus ~ .cd__tooltip {
   display: flex;
   opacity: 1;
 }
 
-.cd-input,
-.cd-input-disabled {
+.cd__input,
+.cd__input--disabled {
   display:flex;
   outline: none;
   font: 1.5rem 'Source Sans Pro';
@@ -69,12 +71,12 @@
   text-align: center;
 }
 
-.cd-input {
+.cd__input {
   cursor: text;
   border-bottom: 1px solid grey;
 }
 
-.cd-input-disabled {
+.cd__input--disabled {
   background: transparent;
 }
   
@@ -82,8 +84,8 @@
   /* box-shadow: none; */
 }
   
-.cd-label,
-.cd-label-disabled {
+.cd__label,
+.cd__label--disabled {
   position: absolute;
   pointer-events: none;
   bottom: .35rem;
@@ -96,20 +98,20 @@
   padding:0;
 }
 
-.cd-label {
+.cd__label {
   left: 1rem;
   font-size: 1.6rem;
 }
 
-.cd-label-disabled {
+.cd__label--disabled {
   left: .9rem;
   font-size: 1.1rem;
   bottom: 1.7rem;
 }
   
   /* set label on top of input and enlarge it*/
-.cd-input:focus ~ .cd-label,
-.cd-input:valid ~ .cd-label {
+.cd__input:focus ~ .cd__label,
+.cd__input:valid ~ .cd__label {
   bottom: 2rem;
   left: .2rem;
   font-size: 1.2rem;
@@ -117,10 +119,10 @@
 }
   
   /* set color label on hover */
-.cd-input:hover ~ .cd-label {
+.cd__input:hover ~ .cd__label {
   color: green;
 }
-.cd-input-disabled:hover ~ .cd-label-disabled {
+.cd__input-disabled:hover ~ .cd__label--disabled {
   color: #ccc;
 }
   
@@ -150,15 +152,15 @@
   right: 50%;
 }
   
-.cd-input:focus ~ .cd__span:before,
-.cd-input:focus ~ .cd__span:after,
-.cd-input:focus ~ div:before,
-.cd-input:focus ~ div:after {
+.cd__input:focus ~ .cd__span:before,
+.cd__input:focus ~ .cd__span:after,
+.cd__input:focus ~ div:before,
+.cd__input:focus ~ div:after {
   width: 50%;
 }
 
   /* SELECT  */
-.cd-select {
+.cd__select {
   display: flex;
   height: 2rem;
   width: 4.5rem;
@@ -181,7 +183,7 @@
   margin: 0;
 }
 
-.cd-select:after {
+.cd__select:after {
   position: absolute;
   top: 0;
   height: 2rem;
