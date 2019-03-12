@@ -44,7 +44,7 @@ export default {
     background: transparent;
     font: 2rem 'Permanent Marker';
     cursor: pointer;
-    border:0;
+    border: 0;
     color: #ccc;
 }
 

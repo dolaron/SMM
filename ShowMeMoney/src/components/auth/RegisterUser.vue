@@ -35,8 +35,6 @@ export default {
             pass: "",
         }
     },
-    computed: {
-    },
     methods: {
         register () {
             this.$store.dispatch("register", { username: this.username, email: this.email, pass: this.pass })
@@ -46,6 +44,7 @@ export default {
 </script>
 
 <style scoped>
+
     .register__credentials {
         display: flex;
         flex-direction: column;

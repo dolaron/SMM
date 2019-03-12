@@ -51,6 +51,7 @@ export default {
 </script>
 
 <style scoped>
+
 .modal__deleted {
     display:flex;
     flex-direction: column;
@@ -114,4 +115,5 @@ export default {
 .modal__deleted__txtb { flex-basis: 6rem; }
 
 .modal__deleted__txtc { flex-basis: 3rem; }
+
 </style>

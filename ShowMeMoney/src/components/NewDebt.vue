@@ -81,8 +81,8 @@ export default {
     .new__debt__row {
         display: flex;
         padding: 0;
-        margin:0;
-        height:2.5rem;
+        margin: 0;
+        height: 2.5rem;
         justify-content: space-around;
     }
 

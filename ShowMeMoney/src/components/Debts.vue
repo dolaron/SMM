@@ -33,7 +33,7 @@ export default {
 .section__wrap {
     display: flex;
     flex-direction: column;
-    flex:1;
+    flex: 1;
     justify-content: space-around;
     height: 90%;
     width: 90%;
