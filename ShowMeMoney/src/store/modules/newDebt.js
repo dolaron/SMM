@@ -1,17 +1,5 @@
 import axios from 'axios'
 
-const state = {
-
-}
-
-const getters = {
-
-}
-
-const mutations = {
-
-}
-
 const actions = {
     postNewDebt ({commit, getters, dispatch}, data) {
         data.debtor = data.debtor.toLowerCase()
@@ -40,8 +28,5 @@ const actions = {
 }
 
 export default {
-    state,
-    getters,
-    mutations,
     actions
 }

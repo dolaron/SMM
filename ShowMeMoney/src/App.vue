@@ -37,21 +37,45 @@ export default {
 
 <style>
 
-.display-row {min-height: 100%;
-min-width: 100%}
+body { margin: 0; }
+
+.display-row {
+  min-height: 100%;
+  min-width: 100%;
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  /* color: #2c3e50; */
   color: #333;
-  /* margin-top: 60px; */
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
 
-body { margin:0; }
+/** transition **/
+.flow-in-enter {
+  opacity: 0;
+  transform: translateX(-10rem);
+}
+
+.flow-in-leave-to {
+  opacity: 0;
+  transform: translateX(10rem);
+}
+
+.flow-in-leave,
+.flow-in-enter-to {
+  opacity: 1;
+  transform: translateX(0rem);
+}
+
+.flow-in-enter-active,
+.flow-in-leave-active {
+  transition: opacity .2s, transform .2s ease-out;
+  will-change: transform;
+}
 
 </style>
