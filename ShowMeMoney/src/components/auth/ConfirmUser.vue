@@ -1,8 +1,8 @@
 <template>
     <div>
         <section class="section">
-            <div class="conf-creds">
-                <h2 class="cred-header">Potwierdz</h2>
+            <div class="confirm__credentials">
+                <h2 class="confirm__credentials__header">Potwierdz</h2>
                 <div class="cd">
                     <input v-model="username" class="cd__input" required>
                     <div class="cd__span"/>
@@ -35,9 +35,6 @@ export default {
             showToast: 'getShowToast'
         })
     },
-    components: {
-
-    },
     methods: {
         confirmUser () {
             const confData = {
@@ -51,15 +48,16 @@ export default {
 </script>
 
 <style>
-.conf-creds {
+
+.confirm__credentials {
     display: flex;
     flex-direction: column;
     height: 25rem;
     justify-content: space-around;
 }
 
-.conf-creds:hover > h2,
-.conf-creds:focus-within > h2 {
+.condirm__credentials:hover > .confirm__credentials__header,
+.condirm__credentials:focus-within > .confirm__credentials__header {
     color: green;
 }
 
