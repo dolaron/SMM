@@ -1,7 +1,7 @@
 <template>
-    <div class="display-row">
+    <div>
         <section class="section">
-            <div class="form-new-debt">
+            <div class="new__debt">
                 <div class="cd">
                     <input v-model="debtor" class="cd__input" required>
                     <span class="cd__span"/>
@@ -17,7 +17,7 @@
                     <span class="cd__span"/>
                     <label class="cd__label"> Ile? </label>
                 </div>
-                <div class="nd-row">
+                <div class="new__debt__row">
                     <div class="cds-s">
                         <select class="cd__select">
                             <option> 2018 </option>
@@ -31,10 +31,10 @@
                         <span class="cd__span"/>
                         <label :class="checkToday ? 'cd__label--disabled' : 'cd__label'"> Kiedy? </label>
                     </div>
-                    <label class="checkbox-wrap">
-                        <input @change="checkToday = !checkToday" class="checkbox-new" type="checkbox" :checked="checkToday">
-	                    <div class="checkbox-in"></div>
-                        <p class="checkbox-label"> Teraz ? </p>
+                    <label class="checkbox__wrap">
+                        <input @change="checkToday = !checkToday" class="checkbox__input" type="checkbox" :checked="checkToday">
+	                    <div class="checkbox__in"></div>
+                        <p class="checkbox__label"> Teraz ? </p>
                     </label>
                 </div>
             </div>
@@ -78,8 +78,8 @@ export default {
 }
 </script>
 
-<style>
-    .nd-row {
+<style scoped>
+    .new__debt__row {
         display: flex;
         padding: 0;
         margin:0;
@@ -87,7 +87,7 @@ export default {
         justify-content: space-around;
     }
 
-    .form-new-debt {
+    .new__debt {
         height: 25rem;
         display: flex;
         flex-direction: column;
