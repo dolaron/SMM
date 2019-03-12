@@ -2,7 +2,7 @@
     <div>
         <section class="section">
             <div class="section-wrap">
-                <router-link to="newDebt" class="btn-new" tag="button">+ Nowy</router-link>
+                <router-link to="newDebt" class="btn__new" tag="button">+ Nowy</router-link>
                 <paginated-list :debts="debts"/>
             </div>
         </section>

@@ -1,12 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
-@import url('https://fonts.googleapis.com/css?family=Work+Sans');
-@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
-@import url('https://fonts.googleapis.com/css?family=News+Cycle');
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
-@import url('https://fonts.googleapis.com/css?family=Ceviche+One');
-@import url('https://fonts.googleapis.com/css?family=Faster+One');
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=News+Cycle|Permanent+Marker|Source+Sans+Pro');
 
 /********************/
 /* VUE Transitions */
@@ -79,47 +71,13 @@ transform: translateX(0rem);
   padding: 0;
 }
 
-
-.hero-header {
-  display: flex;
-  justify-content: flex-start;
-  font-size: 2rem;
-  flex: 1;
-  align-items: center;
-  height: 50%;
-}
-
-.hero-title {
-  padding-left: 5rem;
-  font-family: 'Permanent Marker';
-  margin:0;
-  font-size: 5rem;
-}
-
-.hero-bar {
-  display: flex;
-  height: 50%;
-}
-
-@media (min-width: 20rem){
-  .hero-title {
-    padding-left: 1.35rem;
-  }
-}
-
-
-.btn-submit,
-.btn-new {
+.btn__submit,
+.btn__new {
   display: flex;
   justify-content: center;
-  /* height: 3rem; */
-  /* width: 7.5rem; */
   background: transparent;
   border-radius: 4px;
-  /* border: 2px solid darkolivegreen; */
   border: 2px solid #ccc;
-  /* color:#dabe20; */
-  /* color: #ccc; */
   color: #5fa145;
   font: 1.4rem 'Permanent Marker';
   box-shadow: 1px 0px 10px grey;
@@ -128,19 +86,18 @@ transform: translateX(0rem);
   padding: .35rem;
 }
 
-.btn-submit {
+.btn__submit {
   align-self: center;
 }
 
-.btn-new {
+.btn__new {
   align-self: flex-end;
   margin:0;
 }
 
-.btn-submit:hover,
-.btn-new:hover {
+.btn__submit:hover,
+.btn__new:hover {
   box-shadow: 1px 1px 20px #daa520;
   border: 2px solid #ffde23;
-  /* color: goldenrod; */
   color: #daa520;
 } 

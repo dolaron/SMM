@@ -5,20 +5,20 @@
                 <h2 class="cred-header">Register</h2>
                 <div class="cd">
                     <input v-model="username" class="cd-input" required>
-                    <div class="cd-span"/>
+                    <div class="cd__span"/>
                     <label class="cd-label">Username</label>
                 </div>
                 <div class="cd">
                     <input v-model="email" class="cd-input" required>
-                    <div class="cd-span"/>
+                    <div class="cd__span"/>
                     <label class="cd-label">Email</label>
                 </div>
                 <div class="cd">
                     <input v-model="pass" class="cd-input" type="password" required>
-                    <div class="cd-span"/>
+                    <div class="cd__span"/>
                     <label class="cd-label">Password</label>
                 </div>
-                <button @click="register" class="btn-submit">Rejestruj</button>
+                <button @click="register" class="btn__submit">Rejestruj</button>
             </div>
         </section>
     </div>

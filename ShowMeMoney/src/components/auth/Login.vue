@@ -16,15 +16,15 @@
                     <!-- <h2 class="cred-header">Login</h2> -->
                     <div class="cd" style="margin-top: 2rem;">
                         <input v-model="login" class="cd-input" autocomplete="new-password" required>
-                        <span class="cd-span"/>
+                        <span class="cd__span"/>
                         <label class="cd-label">Login</label>
                     </div>
                     <div class="cd">
                         <input v-model="pass" @keyup.enter="onLogin()" class="cd-input" autocomplete="new-password" type="password" required>
-                        <span class="cd-span"/>
+                        <span class="cd__span"/>
                         <label class="cd-label">Pass</label>
                     </div>
-                    <button @click="onLogin()" class="btn-submit">Zaloguj</button>
+                    <button @click="onLogin()" class="btn__submit">Zaloguj</button>
                     <!-- <button @click="checkLogged">Sprawdz zalogowanegp </button> -->
                 </div>
              </div>
