@@ -1,7 +1,8 @@
 /* material content design for inputsm selects and accompaning labels */
 
 .cd,
-.cd-s {
+.cd--s,
+.cd--xs {
     display: flex;
     position: relative;
     flex-direction: column;
@@ -10,26 +11,14 @@
     height:2rem;
 }
 
-.cds-s {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  padding: 0;
-  margin:0;
-  height:2rem;
-  width: 6rem;
-}
+.cd { width: 18rem; }
 
-.cd {
-  width: 18rem;
-}
+.cd--s { width: 14rem; }
 
-.cd-s {
-  width: 14rem;
-}
+.cd--xs { width: 6rem; }
 
 .cd__tooltip {
-  display:none;
+  display: none;
   opacity: 0;
   position: absolute;
   font-family: 'Permanent Marker';
