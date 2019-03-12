@@ -13,13 +13,8 @@ Vue.use(Vuex)
 require('./assets/styles/main.css')
 require('./assets/styles/cd.css')
 require('./assets/styles/checkbox.css')
-require('./assets/styles/list-debtors.css')
-require('./assets/styles/nav.css')
 require('./assets/styles/modals.css')
 
-
-/* eslint-disable no-new */
-// export const app = new Vue({
 new Vue({
   el: '#app',
   router,
