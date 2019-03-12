@@ -1,20 +1,19 @@
 <template>
     <div>
         <section class="section">
-            <div class="plane-login">
-                <div class="login-btns">
-                    <div class="login-link">
-                        <h4 class="ll-header">Nie masz konta?</h4><span>-></span>
-                        <router-link to="/registerUser" class="btn-register" tag="button">Rejestruj</router-link>
+            <div class="login__plane">
+                <div class="login__plane__btns">
+                    <div class="login__plane__link">
+                        <h4 class="login__plane__link__header">Nie masz konta?</h4><span>-></span>
+                        <router-link to="/registerUser" class="btn__register" tag="button">Rejestruj</router-link>
                     </div>
-                    <div class="login-link">
-                        <h4 class="ll-header">Zarejestrowany?</h4><span>-></span>
-                        <router-link to="/confirmUser" class="btn-confirm" tag="button">Confirm User</router-link>
+                    <div class="login__plane__link">
+                        <h4 class="login__plane__link__header">Zarejestrowany?</h4><span>-></span>
+                        <router-link to="/confirmUser" class="btn__confirm" tag="button">Confirm User</router-link>
                     </div>
                 </div>
-                <div class="login-creds">
-                    <!-- <h2 class="cred-header">Login</h2> -->
-                    <div class="cd" style="margin-top: 2rem;">
+                <div class="login__plane__credentials">
+                    <div class="cd mrt">
                         <input v-model="login" class="cd__input" autocomplete="new-password" required>
                         <span class="cd__span"/>
                         <label class="cd__label">Login</label>
@@ -60,17 +59,16 @@ export default {
 }
 </script>
 
-<style>
-    .plane-login {
+<style scoped>
+    .login__plane {
         display: flex;
         height: 30rem;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-
     }
 
-    .login-btns {
+    .login__plane__btns {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -80,7 +78,7 @@ export default {
         width: 30rem;
     }
 
-    .login-link {
+    .login__plane__link {
         display: flex;
         width: 100%;
         font: 1.4rem 'Permanent Marker';
@@ -88,29 +86,24 @@ export default {
         align-items: center;
     }
 
-    .login-link:hover > * {
+    .login__plane__link:hover > * {
         color: green;
         border-color: green;
     }
 
-    .ll-header {
+    .login__plane__link__header {
         margin: 0;
     }
 
-    .login-creds {
+    .login__plane__credentials {
         display: flex;
         flex-direction: column;
         height: 60%;
         justify-content: space-around;
     }
 
-    .login-creds:hover > h2,
-    .login-creds:focus-within > h2  {
-        color : green;
-    }
-
-    .btn-register,
-    .btn-confirm {
+    .btn__register,
+    .btn__confirm {
         background: transparent;
         border-radius: 10px;
         color: #cccccc;
@@ -124,15 +117,15 @@ export default {
         flex-grow: 0;
     }
 
-    .btn-confirm:hover,
-    .btn-register:hover {
+    .btn__confirm:hover,
+    .btn__register:hover {
         box-shadow: 0 0 25px #808080;
         color: #808080;
         border-color: #808080;
     }
 
-    .cd-margin {
-        margin-bottom: 2rem;
+    .mrt {
+        margin-top: 2rem;
     }
 
 </style>
