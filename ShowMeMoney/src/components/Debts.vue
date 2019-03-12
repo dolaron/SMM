@@ -1,7 +1,7 @@
 <template>
     <div>
         <section class="section">
-            <div class="section-wrap">
+            <div class="section__wrap">
                 <router-link to="newDebt" class="btn__new" tag="button">+ Nowy</router-link>
                 <paginated-list :debts="debts"/>
             </div>
@@ -27,3 +27,17 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+
+.section__wrap {
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    justify-content: space-around;
+    height: 90%;
+    width: 90%;
+}
+
+</style>
+
