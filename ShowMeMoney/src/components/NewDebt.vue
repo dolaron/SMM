@@ -18,12 +18,12 @@
                     <label class="cd__label"> Ile? </label>
                 </div>
                 <div class="new__debt__row">
-                    <div class="cds-s">
+                    <div class="cd--xs">
                         <select class="cd__select">
                             <option v-for="date in dates" :key="date">{{ date }}</option>
                         </select> 
                     </div>
-                    <div class="cd-s">
+                    <div class="cd--s">
                         <input v-model="date" :class="checkToday ? 'cd__input--disabled' : 'cd__input'" type="date" :disabled="checkToday ? true : false" required>
                         <span class="cd__span"/>
                         <label :class="checkToday ? 'cd__label--disabled' : 'cd__label'"> Kiedy? </label>
