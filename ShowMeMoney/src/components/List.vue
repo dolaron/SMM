@@ -26,7 +26,7 @@
         </ul>
         <div class="list__btns">
             <button @click="prevPage" class="list__arrow" :disabled="pageNumber === 0" > &#10094; </button>
-            <button v-for="(p, index) in arrPages" @click="toListPage( index )" :class="[ pageNumber === index ? 'list__dot__active' : 'list__dot' ]" :key="index"> &#8226; </button>
+            <button v-for="(p, index) in arrPages" @click="toListPage( index )" :class="[ pageNumber === index ? 'list__dot--active' : 'list__dot' ]" :key="index"> &#8226; </button>
             <button @click="nextPage" class="list__arrow" :disabled="pageNumber >= pageCount - 1"> &#10095; </button>
         </div>
     </div>
@@ -279,7 +279,7 @@ export default {
 
 
 .list__dot,
-.list__dot__active {
+.list__dot--active {
     display: table;
     font-family: 'Arial';
     background: transparent;
@@ -290,6 +290,7 @@ export default {
     border-radius: 50%;
     margin: 1rem;
     transition: box-shadow .2s , color .2s, opacity .2s;
+    outline: 0;
 }
 
 .list__arrow {
@@ -304,6 +305,7 @@ export default {
     height: 2.6rem;
     color: grey;    
     transition: box-shadow .2s , color .2s, opacity .2s;
+    outline: 0;
 }
 
 .list__dot {
@@ -316,7 +318,7 @@ export default {
 
 .list__dot:focus { outline: 0; }
 
-.list__dot__active {
+.list__dot--active {
     font-size: 2.1rem;
     width: 2.2rem;
     height: 2.2rem;
@@ -325,7 +327,7 @@ export default {
     box-shadow: inset 0px 0px 6px #ccc;
 }
 
-.list__dot__active:after { position: absolute; }
+.list__dot--active:after { position: absolute; }
 
 .list__dot:hover,
 .list__arrow:hover:not(:disabled) {
